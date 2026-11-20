@@ -1,0 +1,24 @@
+# Tesseract OCR (511 МБ) — устанавливается командой micromamba, в репозиторий не попадает
+tesseract-env/
+micromamba.exe
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Данные и результаты (личные данные чеков)
+receipts.xlsx
+test_receipt.png
+test_delete.xlsx
+*.locktest
+
+# Streamlit
+.streamlit/secrets.toml
+
+# ОС / редакторы
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
