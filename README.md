@@ -27,12 +27,19 @@ pip install -r requirements.txt
 Tesseract OCR 5.5.3 (с русским языком) уже предустановлен в папку
 `tesseract-env/` внутри проекта. Никаких дополнительных установок не требуется.
 
-Если папка `tesseract-env` отсутствует (например, проект скопирован без неё),
-установите Tesseract заново одной командой из папки проекта:
+Папка `tesseract-env/` не хранится в Git (весит ~220 МБ). Если её нет — например,
+после клонирования репозитория на другом компьютере — установите Tesseract так:
+
+1. Скачайте `micromamba.exe` (один файл, ~12 МБ):
+   https://github.com/mamba-org/micromamba-releases/releases/latest/download/micromamba-win-64.exe
+   и положите его в папку проекта.
+2. Выполните в папке проекта:
 
 ```cmd
 micromamba.exe create -y -p tesseract-env -c conda-forge tesseract
 ```
+
+В поставку входят все языки, включая русский (`rus`).
 
 Приложение автоматически находит Tesseract в `tesseract-env`; при его отсутствии
 используется Tesseract из системного PATH (тогда установите его вручную с
